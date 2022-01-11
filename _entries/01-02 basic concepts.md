@@ -5,6 +5,116 @@ title: Basic concepts
 parent-id: intro
 ---
 
+### ROSA CLI Demonstration & ROSA example setup
+
+In this section, we’ll give you some links that can be used after the class for independent study.  We’ll demonstrate how to use some ROSA commands, but due to the nature of our shared environment for this workshop, not every student will be able to log in with the full permissions required.  When you test this on your own with your own AWS credentials, all the commands will work in the same manner as they have been demonstrated today.
+
+#### ROSA CLI Demonstration
+
+Need a cmd line demo blah blah pre-amble.
+
+{% collapsible %}
+
+Login as cluster-admin per the Lab Guide and RHPDS email w/ password.
+
+rosa login [arguments] + explanation
+
+rosa verify permissions [arguments] + explanation (e.g. rosa verify permissions --region=us-west-2)
+
+rosa verify quota [arguments] + explanation
+
+rosa download oc + explanation
+
+rosa verify oc
+
+rosa whoami [arguments] + explanation
+
+rosa version [arguments] + explanation
+
+rosa create cluster --cluster=<cluster_name> --debug
+
+rosa list users --cluster=mycluster
+
+rosa describe --cluster=mycluster
+
+rosa list clusters
+
+{% endcollapsible %}
+
+####  ROSA example setup
+
+Further below, we’ve also provided three links to both the official ROSA video on the Red Hat website and a short unofficial YouTube video created by an Australian-based Red Hat employee that demonstrates an abbreviated version of how to set up ROSA yourself with your own AWS credentials for your independent study.
+
+Official video link posted for students to watch later - [https://www.youtube.com/watch?v=MFcbuxkP3C4](https://www.youtube.com/watch?v=MFcbuxkP3C4)
+
+Video link posted for students to watch later - [https://youtu.be/l7ylYBP8p4Q](https://youtu.be/l7ylYBP8p4Q)
+
+{% collapsible %}
+
+AWS UI - create EC2 machine (t2.medium) & create/re-use key-pair
+
+AWS UI - rename cluster
+
+Terminal - ssh ec2-user@<IPAddress> -i /Users/<username>/Downloads/<key-pair>.pem
+
+sudo su
+
+hostnamectl set-hostname <hostname>
+
+Exit, exit & relogin & sudo su
+
+aws configure & put in access key & secret access key & region & output format
+
+console.redhat.com/openshift/downloads - DL the ROSA CLI (choosing the right OS type first)
+
+aws sts get-caller-identity
+
+aws ec2 describe-instances
+
+tar -xvf ROSACLI.tar & mv rosa /usr/bin
+
+rosa –help (or just “rosa” or “rosa -h”) to show list of arguments
+
+https://console.redhat.com/openshift/token/rosa - download token
+
+rosa login & paste token contents into prompt.
+
+rosa verify permissions
+
+rosa verify quota
+
+rosa init
+
+rosa download oc
+
+tar -xvf OCCLI.tar & mv oc /usr/bin & mv kubectl /usr/bin
+
+rosa verify oc
+
+rosa create cluster --cluster-name=<ROSA-example>
+
+rosa list clusters
+
+Rosa logs install -c <ROSA-example> --watch (to watch cluster install logs)
+
+URL at end: https://console.redhat.com/openshift/details/s/<guid>
+
+Terminal: rosa create admin --cluster=<cluster_name>
+
+Get login cmd from results (e.g. - oc login https://api.<cluster-name>.vpbx.p1.openshiftapps.com:6443 --username cluster-admin --password abcde-fghij-klmno-pqrst
+
+In GUI, under Clusters click “Open Console” on right and login w/ cluster-admin/<password from last step>
+
+Terminal: watch oc get pods -n openshift-logging
+
+AWS Console: go to CloudWatch to watch status
+
+Terminal: rosa list addons --cluster=<cluster-name>
+
+{% endcollapsible %}
+
+Provide link to Oren’s “Advanced?” (do we want to label it that?) workshop - [Red Hat OpenShift on AWS Workshop](http://rosaworkshop.io)
+
 ### Source-To-Image (S2I)
 
 Source-to-Image (S2I) is a toolkit and workflow for building reproducible container images from source code. S2I produces ready-to-run images by injecting source code into a container image and letting the container prepare that source code for execution. By creating self-assembling builder images, you can version and control your build environments exactly like you use container images to version your runtime environments.
