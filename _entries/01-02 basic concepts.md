@@ -9,6 +9,10 @@ parent-id: intro
 
 In this section, we’ll give you some links that can be used after the class for independent study.  We’ll demonstrate how to use some ROSA commands, but due to the nature of our shared environment for this workshop, not every student will be able to log in with the full permissions required.  When you test this on your own with your own AWS credentials, all the commands will work in the same manner as they have been demonstrated today.
 
+To effectively administer a ROSA instance, you’ll use a combination of “rosa,” “oc,” and “aws” command line commands.  Below is a concise list of some of the more commonly used ROSA command-line commands which we will be demonstrating today.  Later in the hands-on section of the workshop, you will be using some of the “oc” commands to deploy an application and query its status.  The complete ROSA command list can be found at the following location: [https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html](https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html)
+
+> **NOTE:** You will need to get your individual ROSA token to use when you practice this independently.  Instructions can be found in the section “Configuring the ROSA CLI” in the Get Started link above.
+
 #### ROSA CLI Demonstration
 
 Need a cmd line demo blah blah pre-amble.
