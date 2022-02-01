@@ -19,7 +19,7 @@ You should receive the following response
 
 ```sh
 $ oc new-project ostoy<student#>
-Now using project "ostoy<student#>" on server "https://api.gz49n8jb.westeurope.aroapp.io:6443".
+Now using project "ostoy<student#>" on server "https://api.gz49n8jb.westeurope.rosaapp.io:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -118,10 +118,10 @@ You should see the following response:
 
 ```sh
 NAME          HOST/PORT                                                      PATH      SERVICES              PORT      TERMINATION   WILDCARD
-ostoy-route   ostoy-route-ostoy01.apps.qv4g35sq.westeurope.aroapp.io                   ostoy-frontend-svc    <all>                   None
+ostoy-route   ostoy-route-ostoy01.apps.qv4g35sq.westeurope.rosaapp.io                   ostoy-frontend-svc    <all>                   None
 ```
 
-Copy `ostoy-route-ostoy<student#>.apps.qv4g35sq.westeurope.aroapp.io` from the command line and paste it into your browser and press enter.  You should see the homepage of our application.
+Copy `ostoy-route-ostoy<student#>.apps.qv4g35sq.westeurope.rosaapp.io` from the command line and paste it into your browser and press enter.  You should see the homepage of our application.
 
 ![Home Page](media/managedlab/10-ostoy-homepage.png)
 

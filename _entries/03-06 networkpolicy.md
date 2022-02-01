@@ -5,7 +5,7 @@ title: Create Network Policy
 parent-id: lab-ratingapp
 ---
 
-Now that you have the application working, it is time to apply some security hardening. You'll use [network policies](https://docs.openshift.com/aro/admin_guide/managing_networking.html#admin-guide-networking-networkpolicy) to restrict communication to the `rating-api`.
+Now that you have the application working, it is time to apply some security hardening. You'll use [network policies](https://docs.openshift.com/container-platform/latest/networking/network_policy/about-network-policy.html) to restrict communication to the `rating-api`.
 
 ### Switch to the Cluster Console
 
@@ -50,4 +50,4 @@ Click **Create**.
 {% endcollapsible %}
 
 > **Resources**
-> * [ARO Documentation - Managing Networking with Network Policy](https://docs.openshift.com/aro/admin_guide/managing_networking.html#admin-guide-networking-networkpolicy)
+> * [OpenShift Documentation - Understanding networking](https://docs.openshift.com/container-platform/latest/networking/understanding-networking.html)

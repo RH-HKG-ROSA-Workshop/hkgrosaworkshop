@@ -18,7 +18,7 @@ parent-id: lab-clusterapp
 
 ### About OSToy
 
-OSToy is a simple Node.js application that we will deploy to Azure Red Hat OpenShift. It is used to help us explore the functionality of Kubernetes. This application has a user interface which you can:
+OSToy is a simple Node.js application that we will deploy to Red Hat OpenShift Service on AWS. It is used to help us explore the functionality of Kubernetes. This application has a user interface which you can:
 
 - write messages to the log (stdout / stderr)
 - intentionally crash the application to view self-healing
