@@ -47,6 +47,6 @@ For example, if you are student 15, the command would be `oc new-project worksho
 {% endcollapsible %}
 
 > **Resources**
-> * [ARO Documentation - Access your services](https://docs.openshift.com/aro/getting_started/access_your_services.html)
-> * [ARO Documentation - Getting started with the CLI](https://docs.openshift.com/aro/cli_reference/get_started_cli.html)
-> * [ARO Documentation - Projects](https://docs.openshift.com/aro/dev_guide/projects.html)
+> * [ROSA Documentation - Getting started](https://docs.openshift.com/rosa/rosa_getting_started/rosa-getting-started.html)
+> * [ROSA Documentation - Getting started with the CLI](https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html)
+> * [OpenShift Documentation - Projects](https://docs.openshift.com/container-platform/latest/applications/projects/working-with-projects.html)

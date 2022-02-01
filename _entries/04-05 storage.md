@@ -13,11 +13,11 @@ Inside the OpenShift web UI click on **Storage -> PersistentVolumeClaims** in th
 
 ![StoragePVC](media/managedlab/17-1-ostoy-storagepvc.png)
 
-If you drill into **ostoy-pvc**, you will see *ReadWriteOnce* under *Access Modes*, which means that the volume can only be mounted to one node but the pod(s) can both read and write to that volume.  The default in ARO is for Persistent Volumes to be backed by Azure Disk, but it is possible to chose Azure Files so that you can use the RWX (Read-Write-Many) access mode.  ([See here for more info on access modes](https://docs.openshift.com/aro/architecture/additional_concepts/storage.html#pv-access-modes))
+If you drill into **ostoy-pvc**, you will see *ReadWriteOnce* under *Access Modes*, which means that the volume can only be mounted to one node but the pod(s) can both read and write to that volume.  The default in ROSA is for Persistent Volumes to be backed by the Amazon Web Services Elastic File System (AWS EFS) Disk, but it is possible to use AWS Elastic Block Store (AWS EBS).  ([See here for more info on AWS EBS](https://docs.openshift.com/container-platform/latest/storage/persistent_storage/persistent-storage-aws.html))
 
 In the OSToy app click on *Persistent Storage* in the left menu.  In the "Filename" area enter a filename for the file you will create. (ie: "test-pv.txt")
 
-Underneath that, in the "File Contents" box, enter text to be stored in the file. (ie: "Azure Red Hat OpenShift is the greatest thing since sliced bread!" or "test" :) ).  Then click "Create file".
+Underneath that, in the "File Contents" box, enter text to be stored in the file. (i.e. "ROSA is the greatest thing since sliced bread!" or "test" :) ).  Then click "Create file".
 
 ![Create File](media/managedlab/17-2-ostoy-createfile.png)
 
@@ -64,7 +64,7 @@ $ oc rsh ostoy-frontend-5fc8d486dc-wsw24
 lost+found   test-pv.txt
 
 /var/demo_files $ cat test-pv.txt 
-Azure Red Hat OpenShift is the greatest thing since sliced bread!
+ROSA is the greatest thing since sliced bread!
 ```
 
 Then exit the SSH session by typing `exit`. You will then be in your CLI.

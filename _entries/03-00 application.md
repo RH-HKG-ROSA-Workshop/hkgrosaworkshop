@@ -5,7 +5,7 @@ title: Application Overview
 parent-id: lab-ratingapp
 ---
 
-You will be deploying a ratings application on Azure Red Hat OpenShift.
+You will be deploying a ratings application on Red Hat OpenShift Service on AWS.
 
 ![Application diagram](media/app-overview.png)
 

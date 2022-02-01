@@ -5,9 +5,12 @@ title: Cluster Access
 parent-id: lab-ratingapp
 ---
 
-### Access your Azure Red Hat OpenShift Cluster
+### SSH Session
+So our first step will be to SSH into the jump host. Details will be provided by the instructor with the command to run and the required password.
 
-We'll start by getting into our cluster.
+It will look similar to this: **ssh student01@3.104.30...**
+
+![Jump host SSH](media/jumpssh.png)
 
 ## Connect to the cluster
 
