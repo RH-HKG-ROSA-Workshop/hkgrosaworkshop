@@ -9,7 +9,7 @@ parent-id: intro
 
 In this section, we’ll give you some links that can be used after the class for independent study.  We’ll demonstrate how to use some ROSA commands, but due to the nature of our shared environment for this workshop, not every student will be able to log in with the full permissions required.  When you test this on your own with your own AWS credentials, all the commands will work in the same manner as they have been demonstrated today.
 
-To effectively administer a ROSA instance, you’ll use a combination of “rosa,” “oc,” and “aws” command line commands.  Below is a concise list of some of the more commonly used ROSA command-line commands which we will be demonstrating today.  Later in the hands-on section of the workshop, you will be using some of the “oc” commands to deploy an application and query its status.  The complete ROSA command list can be found at the following location: [https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html](https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html)
+To effectively administer a ROSA cluster, you’ll use a combination of “rosa,” “oc,” and “aws” command line commands.  Below is a concise list of some of the more commonly used ROSA command-line commands which we will be demonstrating today.  Later in the hands-on section of the workshop, you will be using some of the “oc” commands to deploy an application and query its status. The complete ROSA command list can be found at the following location: [https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html](https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html)
 
 > **NOTE:** You will need to get your individual ROSA token to use when you practice this independently.  Instructions can be found in the section “Configuring the ROSA CLI” in the Get Started link above.
 
@@ -21,37 +21,39 @@ Need a cmd line demo blah blah pre-amble.
 
 Login as cluster-admin per the Lab Guide and RHPDS email w/ password.
 
-rosa login [arguments] + explanation
+rosa login [arguments] (to login)
 
-rosa verify permissions [arguments] + explanation (e.g. rosa verify permissions --region=us-west-2)
+rosa verify permissions [arguments] (e.g. rosa verify permissions --region=ap-southeast-2) - (to verify the AWS permissions are set correctly for the specified region)
 
-rosa verify quota [arguments] + explanation
+rosa verify quota [arguments] (to verify the AWS quotas are set correctly for the region)
 
-rosa download oc + explanation
+rosa download oc (to download the OpenShift oc client software)
 
-rosa verify oc
+rosa verify oc - (to verify the OpenShift oc client software has been installed and is available)
 
-rosa whoami [arguments] + explanation
+rosa whoami [arguments] (to get the currently logged in user and environment details)
 
-rosa version [arguments] + explanation
+rosa version [arguments] (to get the version of the installed ROSA software)
 
-rosa create cluster --cluster=<cluster_name> --debug
+rosa create cluster --cluster=<cluster_name> --debug (to create a cluster with the specified name.  NB: there are MANY options to this command and a thorough review of the documentation is recommended.)
 
-rosa list users --cluster=mycluster
+rosa list users --cluster=<cluster_name> (to get a list of users associated with the specified cluster)
 
-rosa describe --cluster=mycluster
+rosa list clusters (to list current clusters)
 
-rosa list clusters
+rosa describe cluster --cluster=<cluster_name> (to get details of specified cluster)
 
 {% endcollapsible %}
 
 ####  ROSA example setup
 
-Further below, we’ve also provided three links to both the official ROSA video on the Red Hat website and a short unofficial YouTube video created by an Australian-based Red Hat employee that demonstrates an abbreviated version of how to set up ROSA yourself with your own AWS credentials for your independent study.
+Further below, we’ve also provided links to both the official ROSA video on the Red Hat website and a short unofficial YouTube video created by an Australian-based Red Hat employee that demonstrates an abbreviated version of how to set up ROSA yourself with your own AWS credentials for your independent study.
 
-Official video link posted for students to watch later - [https://www.youtube.com/watch?v=MFcbuxkP3C4](https://www.youtube.com/watch?v=MFcbuxkP3C4)
+Official ROSA video - [https://www.youtube.com/watch?v=MFcbuxkP3C4](https://www.youtube.com/watch?v=MFcbuxkP3C4)
 
-Video link posted for students to watch later - [https://youtu.be/l7ylYBP8p4Q](https://youtu.be/l7ylYBP8p4Q)
+ROSA setup - [https://youtu.be/l7ylYBP8p4Q](https://youtu.be/l7ylYBP8p4Q)
+
+For reference, the below section is an extraction of commands used in the ROSA setup video above.
 
 {% collapsible %}
 
@@ -117,7 +119,7 @@ Terminal: rosa list addons --cluster=<cluster-name>
 
 {% endcollapsible %}
 
-Provide link to Oren’s “Advanced?” (do we want to label it that?) workshop - [Red Hat OpenShift on AWS Workshop](http://rosaworkshop.io)
+Link to alternative ROSA workshop with more advanced setup steps - [Red Hat OpenShift on AWS Workshop](http://rosaworkshop.io)
 
 ### Source-To-Image (S2I)
 
