@@ -6,7 +6,7 @@ type: nocount
 is-parent: yes
 ---
 
-[Red Hat OpenShift Service on AWS](https://aws.amazon.com/rosa/) (ROSA) is a fully managed Red Hat OpenShift service in AWS that is jointly engineered and supported by Microsoft and Red Hat. In this lab, you'll go through a set of tasks that will help you understand some of the concepts of deploying and securing container based applications on top of Red Hat OpenShift Service on AWS.
+[Red Hat OpenShift Service on AWS](https://aws.amazon.com/rosa/) (ROSA) is a fully managed Red Hat OpenShift service in AWS that is jointly engineered and supported by AWS and Red Hat. In this lab, you'll go through a set of tasks that will help you understand some of the concepts of deploying and securing container based applications on top of Red Hat OpenShift Service on AWS.
 
 You can use this guide as an OpenShift tutorial and as study material to help you get started to learn OpenShift.
 
