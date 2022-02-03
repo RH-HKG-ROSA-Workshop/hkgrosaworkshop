@@ -15,11 +15,9 @@ To effectively administer a ROSA cluster, you’ll use a combination of “rosa,
 
 #### ROSA CLI Demonstration
 
-Need a cmd line demo blah blah pre-amble.
+Here are some of the more commonly used ROSA commands.
 
 {% collapsible %}
-
-Login as cluster-admin per the Lab Guide and RHPDS email w/ password.
 
 rosa login [arguments] (to login)
 
