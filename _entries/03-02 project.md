@@ -13,7 +13,7 @@ Once you're logged into the Web Console, click on the username on the top right,
 
 ![Copy login command link](media/login-command.png)
 
-> **Note** Some browsers may take you back to the initial OpenShift login screen where you will need select the RHPDS-AAD icon once more.
+> **Note** Some browsers may take you back to the initial OpenShift login screen where you will need to re-enter your details.
 
 Click **Display Token**, then copy the command in the section **Log in with this token**.
 
