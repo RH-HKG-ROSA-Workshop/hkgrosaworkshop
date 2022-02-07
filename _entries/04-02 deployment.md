@@ -40,9 +40,9 @@ Equivalently, you can also create this new project using the web UI by selecting
 
 Download the Kubernetes deployment object yamls from the following locations to jump host to a directory of your choosing - just remember where you placed them for the next step.
 
-`wget https://raw.githubusercontent.com/brianstinehart/ocpworkshop/master/yaml/ostoy-fe-deployment.yaml`
+`wget https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-fe-deployment.yaml`
 
-`wget https://raw.githubusercontent.com/brianstinehart/ocpworkshop/master/yaml/ostoy-microservice-deployment.yaml`
+`wget https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-microservice-deployment.yaml`
 
 {% collapsible %}
 
