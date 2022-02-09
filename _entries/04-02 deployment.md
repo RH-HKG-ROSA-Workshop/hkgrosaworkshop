@@ -40,17 +40,17 @@ Equivalently, you can also create this new project using the web UI by selecting
 
 Download the Kubernetes deployment object yamls from the following locations to jump host to a directory of your choosing - just remember where you placed them for the next step.
 
-`wget https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-fe-deployment.yaml`
+`wget https://raw.githubusercontent.com/RH-ANZ-Workshops/anzworkshop/main/yaml/ostoy-fe-deployment.yaml`
 
-`wget https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-microservice-deployment.yaml`
+`wget https://raw.githubusercontent.com/RH-ANZ-Workshops/anzworkshop/main/yaml/ostoy-microservice-deployment.yaml`
 
 {% collapsible %}
 
 Feel free to open them up and take a look at what we will be deploying. For simplicity of this lab we have placed all the Kubernetes objects we are deploying in one "all-in-one" yaml file.  Though in reality there are benefits to separating these out into individual yaml files.
 
-[ostoy-fe-deployment.yaml](https://github.com/brianstinehart/ocpworkshop/blob/master/yaml/ostoy-fe-deployment.yaml)
+[ostoy-fe-deployment.yaml](https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-fe-deployment.yaml)
 
-[ostoy-microservice-deployment.yaml](https://github.com/brianstinehart/ocpworkshop/blob/master/yaml/ostoy-microservice-deployment.yaml)
+[ostoy-microservice-deployment.yaml](https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-microservice-deployment.yaml)
 
 {% endcollapsible %}
 
