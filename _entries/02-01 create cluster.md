@@ -5,9 +5,12 @@ title: Cluster Access
 parent-id: lab-ratingapp
 ---
 
-### Access your Azure Red Hat OpenShift Cluster
+### SSH Session
+So our first step will be to SSH into the jump host. Details will be provided by the instructor with the command to run and the required password.
 
-We'll start by getting into our cluster.
+It will look similar to this: **ssh student01@3.104.30...**
+
+![Jump host SSH](media/jumpssh.png)
 
 ## Connect to the cluster
 
@@ -15,20 +18,12 @@ The cluster web console’s URL will be listed as part of the lab Instructions p
 
 {% collapsible %}
 
-> **Note** Be sure to logout of any Microsoft accounts prior to accessing the login screens or you will not be given the option to login with the account we provide.
+Using console URL link provided, you will be directed to the login page. Enter your login details that have also been provided by the instructor.
 
-Using console URL link provided, you will be directed to the login page. Select the **RHPDS-AAD** option.
-
-![ARO Login Page](media/aro-loginpage.png)
-
-You will be forwarded to a Microsoft login screen - select **Use another account** if you have other Microsoft account listed - where you will use the login details provided.
-
-![Microsoft Login Page](media/aro-loginpageMS1.png) ![Microsoft User Login Page](media/aro-loginpageMS2.png) ![Microsoft Password Login Page](media/aro-loginpageMS3.png)
+![Login Page](media/loginpage.png)
 
 From here you will be taken to the OpenShift web console landing page.
 
-> **Note** Some browsers may take you back to the initial OpenShift login screen where you will need select the RHPDS-AAD icon once more.
-
-![ARO Landing Page](media/aro-landing.png)
+![Landing Page](media/landing.png)
 
 {% endcollapsible %}

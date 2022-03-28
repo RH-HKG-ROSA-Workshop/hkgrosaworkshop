@@ -5,6 +5,120 @@ title: Basic concepts
 parent-id: intro
 ---
 
+### ROSA CLI Demonstration & ROSA example setup
+
+In this section, we’ll give you some links that can be used after the class for independent study.  We’ll demonstrate how to use some ROSA commands, but due to the nature of our shared environment for this workshop, not every student will be able to log in with the full permissions required.  When you test this on your own with your own AWS credentials, all the commands will work in the same manner as they have been demonstrated today.
+
+To effectively administer a ROSA cluster, you’ll use a combination of “rosa,” “oc,” and “aws” command line commands.  Below is a concise list of some of the more commonly used ROSA command-line commands which we will be demonstrating today.  Later in the hands-on section of the workshop, you will be using some of the “oc” commands to deploy an application and query its status. The complete ROSA command list can be found at the following location: [https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html](https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html)
+
+> **NOTE:** You will need to get your individual ROSA token to use when you practice this independently.  Instructions can be found in the section “Configuring the ROSA CLI” in the Get Started link above.
+
+#### ROSA CLI Demonstration
+
+Here are some of the more commonly used ROSA commands.
+
+{% collapsible %}
+
+rosa login [arguments] (to login)
+
+rosa verify permissions [arguments] (e.g. rosa verify permissions --region=ap-southeast-2) - (to verify the AWS permissions are set correctly for the specified region)
+
+rosa verify quota [arguments] (to verify the AWS quotas are set correctly for the region)
+
+rosa download oc (to download the OpenShift oc client software)
+
+rosa verify oc - (to verify the OpenShift oc client software has been installed and is available)
+
+rosa whoami [arguments] (to get the currently logged in user and environment details)
+
+rosa version [arguments] (to get the version of the installed ROSA software)
+
+rosa create cluster --cluster=<cluster_name> --debug (to create a cluster with the specified name.  NB: there are MANY options to this command and a thorough review of the documentation is recommended.)
+
+rosa list users --cluster=<cluster_name> (to get a list of users associated with the specified cluster)
+
+rosa list clusters (to list current clusters)
+
+rosa describe cluster --cluster=<cluster_name> (to get details of specified cluster)
+
+{% endcollapsible %}
+
+####  ROSA example setup
+
+Further below, we’ve also provided links to both the official ROSA video on the Red Hat website and a short unofficial YouTube video created by an Australian-based Red Hat employee that demonstrates an abbreviated version of how to set up ROSA yourself with your own AWS credentials for your independent study.
+
+Official ROSA video - [https://www.youtube.com/watch?v=MFcbuxkP3C4](https://www.youtube.com/watch?v=MFcbuxkP3C4)
+
+ROSA setup - [https://youtu.be/l7ylYBP8p4Q](https://youtu.be/l7ylYBP8p4Q)
+
+For reference, the below section is an extraction of commands used in the ROSA setup video above.
+
+{% collapsible %}
+
+AWS UI - create EC2 machine (t2.medium) & create/re-use key-pair
+
+AWS UI - rename cluster
+
+Terminal - ssh ec2-user@<IPAddress> -i /Users/<username>/Downloads/<key-pair>.pem
+
+sudo su
+
+hostnamectl set-hostname <hostname>
+
+Exit, exit & relogin & sudo su
+
+aws configure & put in access key & secret access key & region & output format
+
+console.redhat.com/openshift/downloads - DL the ROSA CLI (choosing the right OS type first)
+
+aws sts get-caller-identity
+
+aws ec2 describe-instances
+
+tar -xvf ROSACLI.tar & mv rosa /usr/bin
+
+rosa –help (or just “rosa” or “rosa -h”) to show list of arguments
+
+https://console.redhat.com/openshift/token/rosa - download token
+
+rosa login & paste token contents into prompt.
+
+rosa verify permissions
+
+rosa verify quota
+
+rosa init
+
+rosa download oc
+
+tar -xvf OCCLI.tar & mv oc /usr/bin & mv kubectl /usr/bin
+
+rosa verify oc
+
+rosa create cluster --cluster-name=<ROSA-example>
+
+rosa list clusters
+
+Rosa logs install -c <ROSA-example> --watch (to watch cluster install logs)
+
+URL at end: https://console.redhat.com/openshift/details/s/<guid>
+
+Terminal: rosa create admin --cluster=<cluster_name>
+
+Get login cmd from results (e.g. - oc login https://api.<cluster-name>.vpbx.p1.openshiftapps.com:6443 --username cluster-admin --password abcde-fghij-klmno-pqrst
+
+In GUI, under Clusters click “Open Console” on right and login w/ cluster-admin/<password from last step>
+
+Terminal: watch oc get pods -n openshift-logging
+
+AWS Console: go to CloudWatch to watch status
+
+Terminal: rosa list addons --cluster=<cluster-name>
+
+{% endcollapsible %}
+
+Link to alternative ROSA workshop with more advanced setup steps - [Red Hat OpenShift on AWS Workshop](http://rosaworkshop.io)
+
 ### Source-To-Image (S2I)
 
 Source-to-Image (S2I) is a toolkit and workflow for building reproducible container images from source code. S2I produces ready-to-run images by injecting source code into a container image and letting the container prepare that source code for execution. By creating self-assembling builder images, you can version and control your build environments exactly like you use container images to version your runtime environments.

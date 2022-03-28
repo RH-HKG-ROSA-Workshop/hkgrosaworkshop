@@ -17,10 +17,3 @@ You will also need a client to SSH into a jumphost for command line access. Linu
 Along with the web interface, we will be running commands directly against our cluster using a jump host. The SSH client mentioned above will be used to establish an SSH session to that jump host, and the diagram below provides a visual of how this hangs together.
 
 ![Diagram](media/diagram.png)
-
-#### SSH Session
-So our first step will be to SSH into the jump host. Details will be provided by the instructor providing the command to run and the required password.
-
-It will look similar to this: **ssh student01@3.104.30...**
-
-![Jump host SSH](media/jumpssh.png)

@@ -13,4 +13,5 @@ The following people have contributed to this workshop. Thanks!
 <div class="github-contributors">
 {% githubauthor brianstinehart %}
 {% githubauthor SimonDelord %}
+{% githubauthor alflang %}
 </div>

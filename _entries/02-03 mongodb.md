@@ -8,11 +8,11 @@ parent-id: lab-ratingapp
 ### Create MongoDB from template
 
 {% collapsible %}
-Azure Red Hat OpenShift provides many container images and templates to make creating new applications & services easy. The template provides parameter fields to define all the mandatory environment variables (user, password, database name, etc) with predefined defaults including auto-generation of password values. It will also define both a deployment configuration and a service.
+Red Hat OpenShift Service on AWS provides many container images and templates to make creating new applications & services easy. The template provides parameter fields to define all the mandatory environment variables (user, password, database name, etc) with predefined defaults including auto-generation of password values. It will also define both a deployment configuration and a service.
 
 For this exercise we will use the following template:
 
-* `mongodb-persistent` uses a persistent volume store for the database data which means the data will survive a pod restart. Using persistent volumes requires a persistent volume pool be defined in the Azure Red Hat OpenShift deployment.
+* `mongodb-persistent` uses a persistent volume store for the database data which means the data will survive a pod restart. Using persistent volumes requires a persistent volume pool be defined in the Red Hat OpenShift Service on AWS deployment.
 
 > **Hint** You can retrieve a list of templates using the command below. The templates are preinstalled in the `openshift` namespace.
 > ```sh
@@ -74,6 +74,5 @@ You can also retrieve this from the web console by toggling to the **Administrat
 {% endcollapsible %}
 
 > **Resources**
-> * [ARO Documentation - MongoDB](https://docs.openshift.com/aro/using_images/db_images/mongodb.html)
-> * [ARO Documentation - Running MongoDB Commands...](https://docs.openshift.com/aro/using_images/db_images/mongodb.html#running-mongodb-commands-in-containers)
-> * [ARO Documentation - Templates](https://docs.openshift.com/aro/dev_guide/templates.html)
+> * [OpenShift Documentation - Using images](https://docs.openshift.com/container-platform/latest/openshift_images/using_images/using-images-overview.html)
+> * [OpenShift Documentation - Templates](https://docs.openshift.com/container-platform/latest/openshift_images/using-templates.html)

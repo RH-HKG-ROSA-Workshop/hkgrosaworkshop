@@ -13,7 +13,7 @@ Once you're logged into the Web Console, click on the username on the top right,
 
 ![Copy login command link](media/login-command.png)
 
-> **Note** Some browsers may take you back to the initial OpenShift login screen where you will need select the RHPDS-AAD icon once more.
+> **Note** Some browsers may take you back to the initial OpenShift login screen where you will need to re-enter your details.
 
 Click **Display Token**, then copy the command in the section **Log in with this token**.
 
@@ -47,6 +47,6 @@ For example, if you are student 15, the command would be `oc new-project worksho
 {% endcollapsible %}
 
 > **Resources**
-> * [ARO Documentation - Access your services](https://docs.openshift.com/aro/getting_started/access_your_services.html)
-> * [ARO Documentation - Getting started with the CLI](https://docs.openshift.com/aro/cli_reference/get_started_cli.html)
-> * [ARO Documentation - Projects](https://docs.openshift.com/aro/dev_guide/projects.html)
+> * [ROSA Documentation - Getting started](https://docs.openshift.com/rosa/rosa_getting_started/rosa-getting-started.html)
+> * [ROSA Documentation - Getting started with the CLI](https://docs.openshift.com/rosa/rosa_cli/rosa-get-started-cli.html)
+> * [OpenShift Documentation - Projects](https://docs.openshift.com/container-platform/latest/applications/projects/working-with-projects.html)

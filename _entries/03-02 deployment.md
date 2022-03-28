@@ -19,7 +19,7 @@ You should receive the following response
 
 ```sh
 $ oc new-project ostoy<student#>
-Now using project "ostoy<student#>" on server "https://api.gz49n8jb.westeurope.aroapp.io:6443".
+Now using project "ostoy<student#>" on server "https://api.gz49n8jb.westeurope.rosaapp.io:6443".
 
 You can add applications to this project with the 'new-app' command. For example, try:
 
@@ -40,17 +40,17 @@ Equivalently, you can also create this new project using the web UI by selecting
 
 Download the Kubernetes deployment object yamls from the following locations to jump host to a directory of your choosing - just remember where you placed them for the next step.
 
-`wget https://raw.githubusercontent.com/brianstinehart/ocpworkshop/master/yaml/ostoy-fe-deployment.yaml`
+`wget https://raw.githubusercontent.com/RH-ANZ-Workshops/anzworkshop/main/yaml/ostoy-fe-deployment.yaml`
 
-`wget https://raw.githubusercontent.com/brianstinehart/ocpworkshop/master/yaml/ostoy-microservice-deployment.yaml`
+`wget https://raw.githubusercontent.com/RH-ANZ-Workshops/anzworkshop/main/yaml/ostoy-microservice-deployment.yaml`
 
 {% collapsible %}
 
 Feel free to open them up and take a look at what we will be deploying. For simplicity of this lab we have placed all the Kubernetes objects we are deploying in one "all-in-one" yaml file.  Though in reality there are benefits to separating these out into individual yaml files.
 
-[ostoy-fe-deployment.yaml](https://github.com/brianstinehart/ocpworkshop/blob/master/yaml/ostoy-fe-deployment.yaml)
+[ostoy-fe-deployment.yaml](https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-fe-deployment.yaml)
 
-[ostoy-microservice-deployment.yaml](https://github.com/brianstinehart/ocpworkshop/blob/master/yaml/ostoy-microservice-deployment.yaml)
+[ostoy-microservice-deployment.yaml](https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-microservice-deployment.yaml)
 
 {% endcollapsible %}
 
@@ -118,10 +118,10 @@ You should see the following response:
 
 ```sh
 NAME          HOST/PORT                                                      PATH      SERVICES              PORT      TERMINATION   WILDCARD
-ostoy-route   ostoy-route-ostoy01.apps.qv4g35sq.westeurope.aroapp.io                   ostoy-frontend-svc    <all>                   None
+ostoy-route   ostoy-route-ostoy01.apps.qv4g35sq.westeurope.rosaapp.io                   ostoy-frontend-svc    <all>                   None
 ```
 
-Copy `ostoy-route-ostoy<student#>.apps.qv4g35sq.westeurope.aroapp.io` from the command line and paste it into your browser and press enter.  You should see the homepage of our application.
+Copy `ostoy-route-ostoy<student#>.apps.qv4g35sq.westeurope.rosaapp.io` from the command line and paste it into your browser and press enter.  You should see the homepage of our application.
 
 ![Home Page](media/managedlab/10-ostoy-homepage.png)
 
