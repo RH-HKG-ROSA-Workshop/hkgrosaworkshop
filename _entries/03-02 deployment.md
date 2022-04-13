@@ -20,14 +20,6 @@ You should receive the following response
 ```sh
 $ oc new-project ostoy<student#>
 Now using project "ostoy<student#>" on server "https://api.gz49n8jb.westeurope.rosaapp.io:6443".
-
-You can add applications to this project with the 'new-app' command. For example, try:
-
-    oc new-app rails-postgresql-example
-
-to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
-
-    kubectl create deployment hello-node --image=k8s.gcr.io/serve_hostname
 ```
 
 Equivalently, you can also create this new project using the web UI by selecting **Home -> Projects**, then clicking on the **Create Project** button on the right.
