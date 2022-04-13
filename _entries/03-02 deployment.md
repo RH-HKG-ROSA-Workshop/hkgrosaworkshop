@@ -19,7 +19,7 @@ You should receive the following response
 
 ```sh
 $ oc new-project ostoy<student#>
-Now using project "ostoy<student#>" on server "https://api.gz49n8jb.westeurope.aroapp.io:6443".
+Now using project "ostoy<student#>" on server "https://api.gz49n8jb.westeurope.rosaapp.io:6443".
 ```
 
 > **Hint** You can add applications to this project with the 'new-app' command. For example, try:
