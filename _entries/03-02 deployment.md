@@ -96,7 +96,7 @@ In your command line deploy the frontend along with creating all objects mention
 You should see all objects created successfully
 
 ```sh
-$ oc apply -f ostoy-fe-deployment.yaml
+$ oc apply -f https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-fe-deployment.yaml
 persistentvolumeclaim/ostoy-pvc created
 deployment.apps/ostoy-frontend created
 service/ostoy-frontend-svc created
