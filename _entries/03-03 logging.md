@@ -30,7 +30,7 @@ pod/ostoy-microservice-86b4c6f559-p594d
 So the pod name in this case is **ostoy-frontend-679cb85695-5cn7x**.  Then run `oc logs ostoy-frontend-679cb85695-5cn7x` and you should see your messages:
 
 ```sh
-$ oc logs ostoy-frontend-679cb85695-5cn7x
+$ oc logs ostoy-frontend-679cb85695-5cn7x -c ostoy-frontend
 [...]
 ostoy-frontend-679cb85695-5cn7x: server starting on port 8080
 Redirecting to /home
