@@ -22,7 +22,7 @@ For this exercise we will use the following template:
 Create a MongoDB deployment using the `mongodb-persistent` template. You're passing in the values to be replaced (username, password and database) which generates a YAML/JSON file. You then pipe it to the `oc create` command.
 
 ```sh
-oc process openshift//mongodb-persistent \
+oc process openshift//ocp-mongodb-persistent \
     -p MONGODB_USER=ratingsuser \
     -p MONGODB_PASSWORD=ratingspassword \
     -p MONGODB_DATABASE=ratingsdb \
