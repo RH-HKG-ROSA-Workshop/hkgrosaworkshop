@@ -63,25 +63,11 @@ ostoy-frontend-679cb85695-5cn7x       1/1       Running   0          1h
 ostoy-microservice-86b4c6f559-p594d   1/1       Running   0          1h
 ```
 
-Let's change our microservice definition yaml to reflect that we want 3 pods instead of the one we see.  Download the [ostoy-microservice-deployment.yaml](https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-microservice-deployment.yaml) and save it on your local machine.
-
-Open the file using your favorite editor. Ex: `vi ostoy-microservice-deployment.yaml`.
-
-Find the line that states `replicas: 1` and change that to `replicas: 3`. Then save and quit.
-
-It will look like this
-
-```sh
-spec:
-    selector:
-      matchLabels:
-        app: ostoy-microservice
-    replicas: 3
- ```
+Let's scale the microservice to 3 pods instead of the one we see.  
 
 Assuming you are still logged in via the CLI, execute the following command:
 
-`oc apply -f ostoy-microservice-deployment.yaml`
+`oc scale deployment ostoy-microservice --replicas=2`
 
 Confirm that there are now 3 pods via the CLI (`oc get pods`) or the web UI (*Overview > expand "ostoy-microservice"*).
 
