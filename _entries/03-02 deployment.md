@@ -37,23 +37,6 @@ Equivalently, you can also create this new project using the web UI by selecting
 
 {% endcollapsible %}
 
-### Download YAML configuration
-
-Download the Kubernetes deployment object yamls from the following locations to jump host to a directory of your choosing - just remember where you placed them for the next step.
-
-`wget https://raw.githubusercontent.com/RH-ANZ-Workshops/anzworkshop/main/yaml/ostoy-fe-deployment.yaml`
-
-`wget https://raw.githubusercontent.com/RH-ANZ-Workshops/anzworkshop/main/yaml/ostoy-microservice-deployment.yaml`
-
-{% collapsible %}
-
-Feel free to open them up and take a look at what we will be deploying. For simplicity of this lab we have placed all the Kubernetes objects we are deploying in one "all-in-one" yaml file.  Though in reality there are benefits to separating these out into individual yaml files.
-
-[ostoy-fe-deployment.yaml](https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-fe-deployment.yaml)
-
-[ostoy-microservice-deployment.yaml](https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-microservice-deployment.yaml)
-
-{% endcollapsible %}
 
 ### Deploy backend microservice
 
@@ -63,11 +46,11 @@ The microservice application serves internal web requests and returns a JSON obj
 
 In your command line deploy the microservice using the following command:
 
-`oc apply -f ostoy-microservice-deployment.yaml`
+`oc apply -f https://raw.githubusercontent.com/radarlui/hkgrosaworkshop/main/yaml/ostoy-microservice-deployment.yaml`
 
 You should see the following response:
 ```
-$ oc apply -f ostoy-microservice-deployment.yaml
+$ oc apply -f https://raw.githubusercontent.com/radarlui/hkgrosaworkshop/main/yaml/ostoy-microservice-deployment.yaml
 deployment.apps/ostoy-microservice created
 service/ostoy-microservice-svc created
 ```
@@ -91,12 +74,12 @@ The frontend deployment contains the node.js frontend for our application along 
 
 In your command line deploy the frontend along with creating all objects mentioned above by entering:
 
-`oc apply -f ostoy-fe-deployment.yaml`
+`oc apply -f https://raw.githubusercontent.com/radarlui/hkgrosaworkshop/main/yaml/ostoy-fe-deployment.yaml`
 
 You should see all objects created successfully
 
 ```sh
-$ oc apply -f https://github.com/RH-ANZ-Workshops/anzworkshop/blob/main/yaml/ostoy-fe-deployment.yaml
+$ oc apply -f https://raw.githubusercontent.com/radarlui/hkgrosaworkshop/main/yaml/ostoy-fe-deployment.yaml
 persistentvolumeclaim/ostoy-pvc created
 deployment.apps/ostoy-frontend created
 service/ostoy-frontend-svc created
