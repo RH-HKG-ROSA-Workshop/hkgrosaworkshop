@@ -10,7 +10,7 @@ parent-id: intro
 #### Lab Setup
 Along with the web interface, we will be running commands directly against our cluster using OpenShift CLI. Please download the OpenShift CLI for your OS from the links below.
 
-[https://console-openshift-console.apps.cluster-2grqx.2grqx.sandbox38.opentlc.com/command-line-tools](https://console-openshift-console.apps.cluster-2grqx.2grqx.sandbox38.opentlc.com/command-line-tools)
+[https://red.ht/hkg-rosa-workshop-console/command-line-tools](https://red.ht/hkg-rosa-workshop-console/command-line-tools)
 
 or
 
