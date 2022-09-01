@@ -67,7 +67,7 @@ Let's scale the microservice to 3 pods instead of the one we see.
 
 Assuming you are still logged in via the CLI, execute the following command:
 
-`oc scale deployment ostoy-microservice --replicas=2`
+`oc scale deployment ostoy-microservice --replicas=3`
 
 Confirm that there are now 3 pods via the CLI (`oc get pods`) or the web UI (*Overview > expand "ostoy-microservice"*).
 
